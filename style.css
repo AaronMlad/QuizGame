@@ -22,7 +22,7 @@ body {
     padding: 20px;
     background-color: white;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -97,10 +97,10 @@ button {
 button:hover {
     background-color: #20662f;
     box-shadow: 0 0 10px green;
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 button:active {
-    transform: scale(1.4);
+    transform: scale(1.1);
 }
 
 .quiz-header {
@@ -110,6 +110,7 @@ button:active {
 .answers-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .answer-btn {
@@ -119,7 +120,8 @@ button:active {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: transform background-color 0.2s ease;
+    margin-bottom: 5px;
 }
 .answer-btn:hover {
     background-color: #3a853e;
