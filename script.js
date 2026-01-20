@@ -115,10 +115,9 @@ function showQuestion() {
 function selectAnswer(event) {
     if (answersDisabled) return;
     answersDisabled = true;
-
+    
     const selectedButton = event.target;
     const isCorrect = selectedButton.dataset.correct === 'true';
-
     
     Array.from(answerContainer.children).forEach(button => {
         if (button.dataset.correct === 'true') {
@@ -152,9 +151,9 @@ function showResult() {
     const percentage = (score / quizQuestions.length) * 100;
     if (percentage === 100) {
         resultMessage.innerHTML = "<h1>You must be an Asian.</h1>";
-    } else if (percentage >= 70) {
+    } else if (percentage >= 80) {
         resultMessage.innerHTML = "<h1>Not bad. I don't know what else to say.</h1>";
-    } else if (percentage >= 40) {
+    } else if (percentage >= 60) {
         resultMessage.innerHTML = "<h1>Could be worse although it already is.</h1>";
     } else {
         resultMessage.innerHTML = "<h1>Do you even come from this planet?</h1>";

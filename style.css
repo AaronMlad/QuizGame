@@ -35,22 +35,24 @@ body {
 .screen.active {
     display: block;
 }
+
 @keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
 }
 .screen.active h1{
     font-size: 50px;
     font-weight: bold;
     background: linear-gradient(
         90deg,
-        red, orange, yellow, green, blue, indigo, violet, red
+        green, rgb(80, 91, 240), brown, green
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: rainbow 5s linear infinite;
+    animation: rainbow 3s linear infinite;
 }
+
 .screen.active p{
     font-size: 20px;
     margin-top: 20px;
@@ -71,6 +73,7 @@ body {
     color: black;
     margin-bottom: 30px;
 }
+
 
 .quiz-header {
     font-size: 24px;
@@ -120,13 +123,16 @@ button:active {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform background-color 0.2s ease;
+    transition: transform background-color scale 0.2s ease;
     margin-bottom: 5px;
 }
 .answer-btn:hover {
     background-color: #3a853e;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.answer-btn:active {
+    transform: scale(1.025);
 }
 .answer-btn.correct {
     background-color: #00ff08;
